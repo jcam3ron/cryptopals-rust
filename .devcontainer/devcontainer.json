@@ -1,15 +1,20 @@
 {
 	"name": "Rust",
-	"image": "mcr.microsoft.com/devcontainers/rust:1-buster"
+	"image": "mcr.microsoft.com/devcontainers/base:debian-11",
 
 	// Features to add to the dev container. More info: https://containers.dev/implementors/features.
-	// "features": {},
+	"features": {
+		"ghcr.io/devcontainers/features/git:1": { "version": "latest" },
+		"ghcr.io/devcontainers/features/sshd:1": { "version": "latest" },
+		"ghcr.io/devcontainers/features/github-cli:1": { "version": "latest" },
+		"ghcr.io/devcontainers/features/rust:1": { "version": "latest" }
+	},
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	// "postCreateCommand": "rustc --version",
+	"postCreateCommand": "zsh"
 
 	// Configure tool-specific properties.
 	// "customizations": {},
