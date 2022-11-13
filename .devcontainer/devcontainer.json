@@ -1,6 +1,6 @@
 {
 	"name": "Rust",
-	"image": "mcr.microsoft.com/devcontainers/rust:1-buster"
+	"image": "mcr.microsoft.com/devcontainers/rust:1-buster",
 
 	// Features to add to the dev container. More info: https://containers.dev/implementors/features.
 	// "features": {},
@@ -9,7 +9,7 @@
 	// "forwardPorts": [],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	// "postCreateCommand": "rustc --version",
+	"postCreateCommand": "sudo su -c 'chsh -s /bin/zsh'"
 
 	// Configure tool-specific properties.
 	// "customizations": {},
